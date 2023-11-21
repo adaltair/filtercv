@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Filter</title>
+</head>
+<body>
+    <h2>Choose a Filter</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <label for="image">Upload Image:</label>
+        <input type="file" name="image" accept="image/*" required>
+
+        <button type="submit">Apply Filter</button>
+
+        <img src="" alt="">
+    </form>
+</body>
+</html>
