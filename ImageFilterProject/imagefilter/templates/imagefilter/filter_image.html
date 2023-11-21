@@ -11,12 +11,10 @@
         <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
             
-            <!-- Use Tailwind classes for form layout -->
             <div class="mb-4">
                 {{ form.as_p }}
             </div>
 
-            <!-- File input with Tailwind styling -->
             <div class="mb-4">
                 <label for="image" class="text-gray-700 text-sm font-bold mb-2 block">
                     Upload Image:
@@ -24,7 +22,6 @@
                 <input type="file" name="image" accept=".jpg" required class="border rounded w-full py-2 px-3">
             </div>
 
-            <!-- Submit button with Tailwind styling -->
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                 Apply Filter
             </button>

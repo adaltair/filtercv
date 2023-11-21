@@ -1,4 +1,3 @@
-# imagefilter/forms.py
 from django import forms
 
 class FilterForm(forms.Form):
@@ -7,8 +6,6 @@ class FilterForm(forms.Form):
         ('blur', 'Blur'),
         ('edge', 'Edge'),
         ('sharpen', 'Sharpen'),
-        ('rotate', 'Rotate'),
-        ('invert', 'Invert'),
         ('emboss', 'Emboss'),
     ]
     filter_option = forms.ChoiceField(choices=FILTER_CHOICES, widget=forms.RadioSelect)
