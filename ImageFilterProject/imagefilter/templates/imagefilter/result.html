@@ -1,11 +1,18 @@
-<!-- imagefilter/templates/imagefilter/result.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Filtered Image</title>
+    <title>{{ form.name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Filtered Image</h2>
-    <img src="/media/{{ filtered_image_name }}" alt="Filtered Image">
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md w-300">
+        <h2 class="text-2xl font-semibold mb-6">Filtered Image</h2>
+
+        <!-- Display the filtered image with Tailwind styling -->
+        <img src="/media/{{ filtered_image_name }}" alt="Filtered Image" class="rounded-lg border border-gray-300 p-4 mb-8 object-cover object-center w-full h-96">
+
+        <!-- Add a back button with Tailwind styling -->
+        <a href="#" class="text-blue-500 hover:text-blue-700 text-sm" onclick="history.go(-1)">Back to Filter Selection</a>
+    </div>
 </body>
 </html>
